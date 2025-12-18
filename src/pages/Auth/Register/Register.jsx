@@ -1,13 +1,21 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router';
+import useAuth from '../../../assets/hooks/useAuth';
 
 const Register = () => {
-
+    const { registerUser, signInUser } = useAuth()
     const { register, handleSubmit, formState: { errors } } = useForm()
 
     const handleRegister = (data) => {
         console.log('after submit', data)
+        registerUser(data.email, data.password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
     return (
         <div className="min-h-screen flex items-center justify-center px-4">
