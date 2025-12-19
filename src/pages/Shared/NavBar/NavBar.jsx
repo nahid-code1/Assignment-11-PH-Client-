@@ -2,10 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import Logo from '../Logo/Logo';
+import useAuth from '../../../assets/hooks/useAuth';
 
 const NavBar = () => {
 
+    const { user, logOut } = useAuth()
+
     const [theme, setTheme] = useState("light")
+
+    const handleLogOUt = () => {
+        return logOut()
+            .then()
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -41,7 +52,11 @@ const NavBar = () => {
             </div>
 
             <div className="navbar-end gap-3">
-                <NavLink to="/login">Login</NavLink>
+                {
+                    user ?
+                        <button className='cursor-pointer btn btn-secondary' onClick={handleLogOUt}>LogOut</button> :
+                        <NavLink className='btn btn-secondary' to="/login">Login</NavLink>
+                }
 
                 <input
                     type="checkbox"
