@@ -50,7 +50,7 @@ const MyOrders = () => {
                 <div className="card-body">
                     <h2 className="card-title text-2xl md:my-4 flex justify-center underline text-yellow-500">My Orders</h2>
 
-                    {/* Table header */}
+                    {/* Table header r */}
                     <div className="grid grid-cols-4 font-semibold border-b pb-2 text-lg">
                         <span>Book Title</span>
                         <span>Order Date</span>
