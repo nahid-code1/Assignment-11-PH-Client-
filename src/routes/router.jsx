@@ -10,6 +10,7 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import MyOrders from "../pages/Dashbaord/MYOrders";
 import MyProfile from "../pages/Dashbaord/MyProfile";
 import Invoices from "../pages/Dashbaord/Invoices";
+import Payment from "../pages/Dashbaord/Payment/Payment";
 
 
 export const router = createBrowserRouter([
@@ -55,6 +56,10 @@ export const router = createBrowserRouter([
             {
                 path: 'invoices',
                 Component: Invoices,
+            },
+            {
+                path: 'payment/:orderId',
+                Component: Payment,
             }
         ]
     }
