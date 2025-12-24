@@ -70,7 +70,7 @@ const Banner = () => {
                         <div className="hero-content text-center">
                             <div>
                                 <h1 className="text-4xl font-bold">
-                                    Trusted by Book Lovers
+                                    Trusted by Book Lovers.
                                 </h1>
                                 <p className="py-4 text-base-content/80">
                                     Reliable courier service made specially for books.
