@@ -24,7 +24,7 @@ const NavBar = () => {
         <div className="navbar bg-base-100 shadow-sm">
             {/* Navbar start */}
             <div className="navbar-start">
-                {/* Hamburger for sm/md */}
+
                 <div className="lg:hidden relative">
                     <button
                         onClick={() => setDropdownOpen(!dropdownOpen)}
